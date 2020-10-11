@@ -1,0 +1,151 @@
+mysql> create database airlines;
+Query OK, 1 row affected (0.02 sec)
+
+mysql> use airlines;
+Database changed
+mysql> create table cancellation (pnr_no varchar(10), cancellation_no varchar(10), cancellation_date DATE, fli_code varchar(15));
+Query OK, 0 rows affected (0.05 sec)
+
+mysql> create table flight(f_code varchar(10), f_name varchar(20), src varchar(30), dst varchar(30));
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> create table login(username varchar(20), password varchar(20));
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> create table passenger(pnr_no varchar(10), address varchar(30), nationality varchar(15), name varchar(20), gender varchar(10), ph_no varchar(15), passport_no varchar(20), fl_code varchar(10));
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> create table payment(pnr_no varchar(10), ph_no varchar(15), cheque_no varchar(15), card_no varchar(20), paid_amt varchar(10), pay_date DATE);
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> create table reservation(pnr_no varchar(10), ticket_id varchar(10), f_code varchar(10), jny_date DATE, jny_time varchar(10), src varchar(20), dst varchar(20));
+Query OK, 0 rows affected (0.02 sec)
+ 
+mysql> create table sector(flight_code varchar(20), capacity varchar(10), class_code varchar(5), class_name varchar(20));
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| airlines           |
+| coffee_store       |
+| information_schema |
+| mysql              |
+| performance_schema |
+| sys                |
+| test               |
++--------------------+
+7 rows in set (0.03 sec)
+
+mysql> use airlines;
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+mysql> show tables;
++--------------------+
+| Tables_in_airlines |
++--------------------+
+| cancellation       |
+| flight             |
+| login              |
+| passenger          |
+| payment            |
+| reservation        |
+| sector             |
++--------------------+
+7 rows in set (0.01 sec)
+
+mysql> describe cancellation;
++-------------------+-------------+------+-----+---------+-------+
+| Field             | Type        | Null | Key | Default | Extra |
++-------------------+-------------+------+-----+---------+-------+
+| pnr_no            | varchar(10) | YES  |     | NULL    |       |
+| cancellation_no   | varchar(10) | YES  |     | NULL    |       |
+| cancellation_date | date        | YES  |     | NULL    |       |
+| fli_code          | varchar(15) | YES  |     | NULL    |       |
++-------------------+-------------+------+-----+---------+-------+
+4 rows in set (0.01 sec)
+
+mysql> describe flight;
++--------+-------------+------+-----+---------+-------+
+| Field  | Type        | Null | Key | Default | Extra |
++--------+-------------+------+-----+---------+-------+
+| f_code | varchar(10) | YES  |     | NULL    |       |
+| f_name | varchar(20) | YES  |     | NULL    |       |
+| src    | varchar(30) | YES  |     | NULL    |       |
+| dst    | varchar(30) | YES  |     | NULL    |       |
++--------+-------------+------+-----+---------+-------+
+4 rows in set (0.01 sec)
+
+mysql> insert into flight (f_code, f_name, src, dst) values ('JA9011', 'Jet Airways', 'Mumbai', 'Delhi');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into flight (f_code, f_name, src, dst) values ('JA9012', 'Jet Airways', 'Mumbai', 'Jaipur');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into flight (f_code, f_name, src, dst) values ('JA9013', 'Jet Airways', 'Mumbai', 'Lucknow');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into flight (f_code, f_name, src, dst) values ('JA9014', 'Jet Airways', 'Delhi', 'Mumbai');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into flight (f_code, f_name, src, dst) values ('JA9015', 'Jet Airways', 'Delhi', 'Lucknow');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into flight (f_code, f_name, src, dst) values ('JA9016', 'Jet Airways', 'Delhi', 'Jaipur');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into flight (f_code, f_name, src, dst) values ('JA9017', 'Jet Airways', 'Jaipur', 'Delhi');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into flight (f_code, f_name, src, dst) values ('JA9018', 'Jet Airways', 'Jaipur', 'Mumbai');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into flight (f_code, f_name, src, dst) values ('JA9019', 'Jet Airways', 'Jaipur', 'Lucknow');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into flight (f_code, f_name, src, dst) values ('JA9020', 'Jet Airways', 'Lucknow', 'Mumbai');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into flight (f_code, f_name, src, dst) values ('JA9021', 'Jet Airways', 'Lucknow', 'Delhi');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into flight (f_code, f_name, src, dst) values ('JA9022', 'Jet Airways', 'Lucknow', 'Jaipur');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> select * from flight;
++--------+-------------+---------+---------+
+| f_code | f_name      | src     | dst     |
++--------+-------------+---------+---------+
+| JA9011 | Jet Airways | Mumbai  | Delhi   |
+| JA9012 | Jet Airways | Mumbai  | Jaipur  |
+| JA9013 | Jet Airways | Mumbai  | Lucknow |
+| JA9014 | Jet Airways | Delhi   | Mumbai  |
+| JA9015 | Jet Airways | Delhi   | Lucknow |
+| JA9016 | Jet Airways | Delhi   | Jaipur  |
+| JA9017 | Jet Airways | Jaipur  | Delhi   |
+| JA9018 | Jet Airways | Jaipur  | Mumbai  |
+| JA9019 | Jet Airways | Jaipur  | Lucknow |
+| JA9020 | Jet Airways | Lucknow | Mumbai  |
+| JA9021 | Jet Airways | Lucknow | Delhi   |
+| JA9022 | Jet Airways | Lucknow | Jaipur  |
++--------+-------------+---------+---------+
+12 rows in set (0.00 sec)
+
+mysql> show tables;
++--------------------+
+| Tables_in_airlines |
++--------------------+
+| cancellation       |
+| flight             |
+| login              |
+| passenger          |
+| payment            |
+| reservation        |
+| sector             |
++--------------------+
+7 rows in set (0.00 sec)
+
+mysql> quit
