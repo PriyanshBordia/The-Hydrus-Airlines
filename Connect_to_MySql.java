@@ -10,10 +10,10 @@ public class Connect_to_MySql
 	{
 		try
 		{
-			//System.out.println(123);
-			Class.forName("com.mysql.jdbc.Driver");
-			C = DriverManager.getConnection("jdbc:mysql://project4" , "root" , " ");
-			S = C.createStatement();
+			//System.out.println(123); 
+			Class.forName("com.mysql.jdbc.Driver"); 
+			C = DriverManager.getConnection("jdbc:mysql://localhost:3306/airline_database" , "root" , "itsmylife");  
+			S = C.createStatement(); 
 		}
 		catch (Exception e)
 		{
