@@ -27,7 +27,7 @@ public class login extends JFrame implements ActionListener
     
     public login()
     {
-    	super("Login");
+    	super("Login"); 	
     	
     	setBackground(Color.white);
     	
@@ -124,7 +124,7 @@ public class login extends JFrame implements ActionListener
     		}
     		catch(Exception e)
     		{
-    			
+    			System.out.print("DD");
     		}
     	}
     	

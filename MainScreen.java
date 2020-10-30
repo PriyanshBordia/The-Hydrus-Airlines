@@ -18,6 +18,7 @@ public class MainScreen extends JFrame implements ActionListener
 	private static final Object PassengerDetails = null;
 	private static final Object SectorDetails = null;
 	private static final Object Cancellation = null;
+	private static final Object E_Ticket = null;
 	
 	public static void main(String[] args)
 	{
@@ -116,27 +117,14 @@ public class MainScreen extends JFrame implements ActionListener
                     e.printStackTrace();
         		}
         	}
-        	
-        	if(a.getSource()==SectorDetails)
-        	{
-        		try 
-        		{
-                    new Payment_Details();
-        		} 
-        		catch (Exception e) 
-        		{
-                    e.printStackTrace();
-        		}
-        	}
-        	
         	if(a.getSource()==Cancellation)
         	{
-        		new Cancel();
+        		new Cancel(); 
         	}
         	
         	if(a.getSource()==E_Ticket)
         	{
-        		new E_Ticket();
+        		new E_Ticket(); 
         	}
         	
         }
