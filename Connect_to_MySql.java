@@ -11,7 +11,7 @@ public class Connect_to_MySql
 			try
 			{
 				Class.forName("com.mysql.jdbc.Driver"); 
-				C = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/airline_database" , "root" , "itsmylife");  
+				C = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/airline_database" , "root" , "priyanshbordia");  
 				S = C.createStatement(); 
 				//new login();
 			}

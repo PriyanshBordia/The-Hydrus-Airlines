@@ -1,7 +1,7 @@
-
-drop database airline_database;
+-- drop database airline_database;
 create database airline_database;
- use airline_database; 
+
+use airline_database; 
  create table login(username varchar(20) primary key , password varchar(20) );
  create table flight(f_code varchar(10) primary key , f_name varchar(20), src varchar(30), dst varchar(30) , cap int);
  create table passenger(p_code int auto_increment , nationality varchar(15), name varchar(20), age varchar(3) ,  gender varchar(10), ph_no varchar(15), passport_no varchar(20), primary key (p_code));
