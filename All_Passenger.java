@@ -7,7 +7,7 @@ import java.awt.image.*;
 import java.sql.*;
 import net.proteanit.sql.*;
 
-public class Flight_Info extends JFrame
+public class All_Passenger extends JFrame
 {
 	/**
 	 * 
@@ -18,27 +18,27 @@ public class Flight_Info extends JFrame
 	
 	public static void main(String[] args)
 	{
-		new Flight_Info();
+		new All_Passenger();
 	}
 	
-	Flight_Info()
+	All_Passenger()
 	{
 		getContentPane().setBackground(Color.WHITE);
 		getContentPane().setFont(new Font("Aerial", Font.PLAIN, 13));
 		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setSize(860,523);
+		setSize(860 , 523);
 		setLayout(null);
 		setVisible(true);
 		
-		/*JLabel L = new JLabel("CODE");
+		JLabel L = new JLabel("FLIGHT CODE");
 		L.setBounds(50, 100, 200, 30);
-		add(L);*/
+		add(L);
 		
-		JLabel FlightDetails = new JLabel("FLIGHT INFORMATION");
+		JLabel FlightDetails = new JLabel("PASSENGER INFORMATION");
 		FlightDetails.setFont(new Font("Tahoma", Font.PLAIN, 31));
 		FlightDetails.setForeground(new Color(100, 149, 237));
-		FlightDetails.setBounds(50, 20, 570, 35);
+		FlightDetails.setBounds(50, 20, 570, 35);				
 		add(FlightDetails);
 			
 		JButton B = new JButton("SHOW");
@@ -50,13 +50,13 @@ public class Flight_Info extends JFrame
 		    {
 		    	if(a.getSource()==B)
 		    	{
-		    		//String code = text.getText();
+		    		String code = text.getText();
 			        try 
 			        {
 				        Connect_to_MySql C = new Connect_to_MySql();
-				        String str = "select * from flight";	       
+				        String str = "select * from passenger where fl_code = '" +code+"'";	       
 				        ResultSet rs = C.S.executeQuery(str);
-				        T.setModel(DbUtils.resultSetToTableModel(rs)); 
+				        T.setModel(DbUtils.resultSetToTableModel(rs));  
 			        }
 			        catch(SQLException e)
 			        {
@@ -78,9 +78,9 @@ public class Flight_Info extends JFrame
 	    pane.setBackground(Color.WHITE);
 	    add(pane); 
 			
-		/*text = new JTextField();
+		text = new JTextField();
 	    text.setBounds(220, 100, 200, 30);
-		add(text); */
+		add(text); 
 			
 		
 	    setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
