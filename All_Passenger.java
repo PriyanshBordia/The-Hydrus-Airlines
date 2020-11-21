@@ -54,7 +54,7 @@ public class All_Passenger extends JFrame
 			        try 
 			        {
 				        Connect_to_MySql C = new Connect_to_MySql();
-				        String str = "select * from passenger where fl_code = '" +code+"'";	       
+				        String str = "select * from passenger where p_code in ( select p_code from booking where f_code ='"+code+"') ";	       
 				        ResultSet rs = C.S.executeQuery(str);
 				        T.setModel(DbUtils.resultSetToTableModel(rs));  
 			        }
