@@ -16,11 +16,8 @@ Query OK, 0 rows affected (0.02 sec)
 mysql> create table passenger (p_id varchar(10) PRIMARY KEY, pnr_no varchar(10), nationality varchar(15), name varchar(20), gender varchar(10), age int, ph_no varchar(15), passport_no varchar(20), f_code varchar(10), FOREIGN KEY (f_code) references flight (f_code),  FOREIGN KEY (pnr_no) references reservation (pnr_no));
 Query OK, 0 rows affected (0.02 sec)
 
-mysql> create table cancellation (pnr_no varchar(10), cancellation_no varchar(10), cancellation_date datetime, fli_code varchar(15), PRIMARY KEY (cancellation_no), FOREIGN KEY (pnr_no) REFERENCES reservation (pnr_no));
+mysql> create table cancellation (pnr_no varchar(10), cancellation_no varchar(10));
 Query OK, 0 rows affected (0.03 sec)
-
-mysql> create table payment(p_id varchar(10), pnr_no varchar(10), ph_no varchar(15), cheque_no varchar(15), card_no varchar(20), paid_amt varchar(10), pay_date datetime, FOREIGN KEY (p_id) REFERENCES passenger (p_id), FOREIGN KEY (pnr_no) REFERENCES reservation (pnr_no));
-Query OK, 0 rows affected (0.02 sec)
 
 mysql> describe login;
 +----------+-------------+------+-----+---------+-------+
