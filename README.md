@@ -5,6 +5,7 @@
 > Using MySQL for storing data and Java Swing library which if fun to work with.
 
 <hr>
+
 ### Details 
 
 Group No ~ `1`
