@@ -4,7 +4,7 @@
 > It's easy to use and fun to play around. Under the guidance of Mr. Mukesh Jadon and all the TA's at LNMIIT we have joyfully created the project.
 > Using MySQL for storing data and Java Swing library which if fun to work with.
 
-###### Details 
+### Details 
 
 Group No ~ `1`
 
