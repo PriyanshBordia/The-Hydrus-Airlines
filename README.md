@@ -6,9 +6,15 @@
 
 <hr>
 
-<h3>Features</h3>
+<h2>Features</h2>
 <ul>
-	<li href = "login">Login</li>
+	<a href = "login">Login</a>
+	<a href = "mainframe">Main Screen</a>
+	<a href = "flights">All Flights</a>
+	<a href = "flight">Between Destinations</a>
+	<a href = "book">Book Ticket</a>
+	<a href = "print">Print Ticket</a>
+	<a href = "cancel">Cancel Ticket</a>
 </ul>
 
 <hr>
@@ -19,7 +25,7 @@ Group No ~ `1`
 
 Date of Submission ~ `21-11-2020`
 
-#### Group Members
+### Group Members
 
 <table>
 	<tr>
@@ -38,31 +44,31 @@ Date of Submission ~ `21-11-2020`
 
 <hr>
 
-<h3 id="login">Login</h3>
+<h2 id="login">Login</h2>
 
 ![login](./Screenshots/login.jpeg)
 
-<h3 id="loginmainframe">Main Screen</h3>
+<h2 id="mainframe">Main Screen</h2>
 
-![loginmainframe](./Screenshots/loginmainframe.jpeg)
+![mainframe](./Screenshots/mainframe.jpeg)
 
-<h3 id="flights">All Flights</h3>
+<h2 id="flights">All Flights</h2>
 
 ![flights](./Screenshots/flights.jpeg)
 
-<h3 id="flight">Between Destinations</h3>
+<h2 id="flight">Between Destinations</h2>
 
 ![flight](./Screenshots/flight.jpeg)
 
-<h3 id="book">Book Ticket</h3>
+<h2 id="book">Book Ticket</h2>
 
 ![book](./Screenshots/book.jpeg)
 
-<h3 id="ticket">Print Ticket</h3>
+<h2 id="print">Print Ticket</h2>
 
-![ticket](./Screenshots/ticket.jpeg)
+![ticket](./Screenshots/print.jpeg)
 
-<h3 id="cancel">Cancel Booking</h3>
+<h2 id="cancel">Cancel Booking</h2>
 
 ![cancel](./Screenshots/cancel.jpeg)
 
