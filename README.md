@@ -8,13 +8,13 @@
 
 <h2>Features</h2>
 <ul>
-	<a href = "login">Login</a>
-	<a href = "mainframe">Main Screen</a>
-	<a href = "flights">All Flights</a>
-	<a href = "flight">Between Destinations</a>
-	<a href = "book">Book Ticket</a>
-	<a href = "print">Print Ticket</a>
-	<a href = "cancel">Cancel Ticket</a>
+	<li><a id = "login">Login</a></li>
+	<li><a href = "mainframe">Main Screen</a></li>
+	<li><a href = "flights">All Flights</a></li>
+	<li><a href = "flight">Between Destinations</a></li>
+	<li><a href = "book">Book Ticket</a></li>
+	<li><a href = "print">Print Ticket</a></li>
+	<li><a href = "cancel">Cancel Ticket</a></li>
 </ul>
 
 <hr>
