@@ -40,6 +40,30 @@ Date of Submission ~ `21-11-2020`
 
 <h3 id="login">Login</h3>
 
-[!login]("./Screenshots/login.jpeg")
+![login](./Screenshots/login.jpeg)
+
+<h3 id="loginmainframe">Main Screen</h3>
+
+![loginmainframe](./Screenshots/loginmainframe.jpeg)
+
+<h3 id="flights">All Flights</h3>
+
+![flights](./Screenshots/flights.jpeg)
+
+<h3 id="flight">Between Destinations</h3>
+
+![flight](./Screenshots/flight.jpeg)
+
+<h3 id="book">Book Ticket</h3>
+
+![book](./Screenshots/book.jpeg)
+
+<h3 id="ticket">Print Ticket</h3>
+
+![ticket](./Screenshots/ticket.jpeg)
+
+<h3 id="cancel">Cancel Booking</h3>
+
+![cancel](./Screenshots/cancel.jpeg)
 
 <hr>
