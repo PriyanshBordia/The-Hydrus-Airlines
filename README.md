@@ -6,6 +6,13 @@
 
 <hr>
 
+<h3>Features</h3>
+<ul>
+	<li href = "login">Login</li>
+</ul>
+
+<hr>
+
 ### Details 
 
 Group No ~ `1`
@@ -28,3 +35,11 @@ Date of Submission ~ `21-11-2020`
 		<td> 19UCS205 </td> <td> Nishant Dixit </td>
 	</tr>
 </table>
+
+<hr>
+
+<h3 id="login">Login</h3>
+
+[!login]("./Screenshots/login.jpeg")
+
+<hr>
