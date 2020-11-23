@@ -7,16 +7,16 @@ Database changed
 mysql> create table login(username varchar(20) PRIMARY KEY, password varchar(20));
 Query OK, 0 rows affected (0.02 sec)
 
-mysql> create table flight(f_code varchar(10) PRIMARY KEY, f_name varchar(20), src varchar(30), dst varchar(30));
+mysql> create table flight(f_code varchar(10) PRIMARY KEY, f_name varchar(20), src varchar(30), dst varchar(30), c);
 Query OK, 0 rows affected (0.02 sec)
 
-mysql> create table reservation (pnr_no varchar(10) PRIMARY KEY, f_code varchar(10), jny_date DATE, jny_time varchar(10), src varchar(20), dst varchar(20), FOREIGN KEY (f_code) references flight (f_code));
+mysql> create table passenger (p_code int(10) PRIMARY KEY auto increment,  nationality varchar(15), name varchar(20), gender varchar(10), age int, ph_no varchar(15), passport_no varchar(20));
 Query OK, 0 rows affected (0.02 sec)
 
-mysql> create table passenger (p_id varchar(10) PRIMARY KEY, pnr_no varchar(10), nationality varchar(15), name varchar(20), gender varchar(10), age int, ph_no varchar(15), passport_no varchar(20), f_code varchar(10), FOREIGN KEY (f_code) references flight (f_code),  FOREIGN KEY (pnr_no) references reservation (pnr_no));
+mysql> create table booking (pnr_no int PRIMARY KEY  auto increment, f_code varchar(10), FOREIGN KEY (f_code) references flight (f_code), FOREIGN KEY (p_code) references passenger (p_code));
 Query OK, 0 rows affected (0.02 sec)
 
-mysql> create table cancellation (pnr_no varchar(10), cancellation_no varchar(10));
+mysql> create table cancellation (pnr_no int), cancellation_no int  PRIMARY KEY  auto increment);
 Query OK, 0 rows affected (0.03 sec)
 
 mysql> describe login;
@@ -39,16 +39,13 @@ mysql> describe flight;
 +--------+-------------+------+-----+---------+-------+
 4 rows in set (0.00 sec)
 
-mysql> describe reservation;
+mysql> describe booking;
 +----------+-------------+------+-----+---------+-------+
 | Field    | Type        | Null | Key | Default | Extra |
 +----------+-------------+------+-----+---------+-------+
-| pnr_no   | varchar(10) | NO   | PRI | NULL    |       |
+| pnr_no   | int | NO   | PRI | NULL    |       |
 | f_code   | varchar(10) | YES  | MUL | NULL    |       |
-| jny_date | date        | YES  |     | NULL    |       |
-| jny_time | varchar(10) | YES  |     | NULL    |       |
-| src      | varchar(20) | YES  |     | NULL    |       |
-| dst      | varchar(20) | YES  |     | NULL    |       |
+| p_code   | int | YES  | MUL | NULL    |       |
 +----------+-------------+------+-----+---------+-------+
 6 rows in set (0.00 sec)
 
@@ -56,15 +53,13 @@ mysql> describe passenger;
 +-------------+-------------+------+-----+---------+-------+
 | Field       | Type        | Null | Key | Default | Extra |
 +-------------+-------------+------+-----+---------+-------+
-| p_id        | varchar(10) | NO   | PRI | NULL    |       |
-| pnr_no      | varchar(10) | YES  | MUL | NULL    |       |
+| p_code      | int | NO   | PRI | NULL    |       |
 | nationality | varchar(15) | YES  |     | NULL    |       |
 | name        | varchar(20) | YES  |     | NULL    |       |
 | gender      | varchar(10) | YES  |     | NULL    |       |
 | age         | int         | YES  |     | NULL    |       |
 | ph_no       | varchar(15) | YES  |     | NULL    |       |
 | passport_no | varchar(20) | YES  |     | NULL    |       |
-| f_code      | varchar(10) | YES  | MUL | NULL    |       |
 +-------------+-------------+------+-----+---------+-------+
 9 rows in set (0.01 sec)
 
@@ -74,24 +69,9 @@ mysql> describe cancellation;
 +-------------------+-------------+------+-----+---------+-------+
 | pnr_no            | varchar(10) | YES  | MUL | NULL    |       |
 | cancellation_no   | varchar(10) | NO   | PRI | NULL    |       |
-| cancellation_date | datetime    | YES  |     | NULL    |       |
-| fli_code          | varchar(15) | YES  |     | NULL    |       |
 +-------------------+-------------+------+-----+---------+-------+
 4 rows in set (0.01 sec)
 
-mysql> describe payment;
-+-----------+-------------+------+-----+---------+-------+
-| Field     | Type        | Null | Key | Default | Extra |
-+-----------+-------------+------+-----+---------+-------+
-| p_id      | varchar(10) | YES  | MUL | NULL    |       |
-| pnr_no    | varchar(10) | YES  | MUL | NULL    |       |
-| ph_no     | varchar(15) | YES  |     | NULL    |       |
-| cheque_no | varchar(15) | YES  |     | NULL    |       |
-| card_no   | varchar(20) | YES  |     | NULL    |       |
-| paid_amt  | varchar(10) | YES  |     | NULL    |       |
-| pay_date  | datetime    | YES  |     | NULL    |       |
-+-----------+-------------+------+-----+---------+-------+
-7 rows in set (0.00 sec)
 
 mysql> insert into flight (f_code, f_name, src, dst) values ('JA9011', 'Jet Airways', 'Mumbai', 'Delhi');
 Query OK, 1 row affected (0.01 sec)
