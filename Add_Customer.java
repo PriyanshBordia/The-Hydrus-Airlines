@@ -167,25 +167,38 @@ public class Add_Customer extends JFrame {
 					String fl_code = tf6.getText(); 
 					int PNR = 0; 
 					//String pnr = generate_pnr(passport , fl_code);
-					try {
+					
+					try 
+					{
 						Connect_to_MySql C1 = new Connect_to_MySql();
+						
 						String str = "INSERT INTO passenger (passport_no , name , gender , age , nationality , ph_no) VALUES ('"+passport+"' ,  '"+name+"' , '"+gender+"' ,  '"+age+"' , '"+nationality+"' , '"+P_number+"')";                                             
 						C1.S.executeUpdate(str);
+						
 						str = "SELECT p_code FROM passenger where passport_no =  '"+passport+"' and name = '"+name+"'"; 
 						ResultSet rs = C1.S.executeQuery(str);
+						
 						rs.next();
+						
 						int p_code = rs.getInt("p_code"); 
-						//System.out.println(p_code); 			
 						str = "INSERT INTO booking (f_code , p_code) VALUES ('"+fl_code+"' , '"+p_code+"')"; 
+						
 						C1.S.executeUpdate(str);
 						str = "SELECT pnr_no FROM booking where f_code =  '"+fl_code+"' and p_code = '"+p_code+"'"; 
 						ResultSet rs1 = C1.S.executeQuery(str);
-						rs1.next(); 
-						PNR = rs1.getInt("pnr_no"); 
-					}catch(Exception e) {	
 						
+						rs1.next(); 
+						
+						PNR = rs1.getInt("pnr_no"); 
+					}
+					
+					catch(Exception e) 
+					{	
 						System.out.println(e); 
-					}finally {
+					}
+					
+					finally 
+					{
 						JOptionPane.showMessageDialog(null , "INSERTION DONE"); 
 	                    setVisible(false); 			
 	                    new E_Ticket(PNR); 

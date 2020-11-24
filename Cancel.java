@@ -75,22 +75,25 @@ public class Cancel extends JFrame
 			{
 				if(a.getSource()==B)
 				{
-					try {
-					String pnr = tf1.getText();
-					int s = Integer.parseInt(pnr);
-					Connect_to_MySql C1 = new Connect_to_MySql();
+					try 
+					{
+						String pnr = tf1.getText();
+						int s = Integer.parseInt(pnr);
+						
+						Connect_to_MySql C1 = new Connect_to_MySql();
 
 						String str = "INSERT INTO cancel (pnr_no) VALUES ('" +pnr+"')";
 						C1.S.executeUpdate(str);
 					
 						str = "DELETE FROM booking WHERE pnr_no = '"+pnr+"'";
-						C1.S.executeUpdate(str);
-						
-						
+						C1.S.executeUpdate(str);	
 					}
-						catch (SQLException e) {
-							e.printStackTrace();
-						}
+					
+					catch (SQLException e) 
+					{
+						e.printStackTrace();
+					}
+					
 					setVisible(false);
 				}
 			}
