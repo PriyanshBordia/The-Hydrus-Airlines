@@ -19,13 +19,8 @@
 
 <hr>
 
-### Details 
 
-Group No ~ `1`
-
-Date of Submission ~ `21-11-2020`
-
-### Group Members
+### Contributors
 
 <table>
 	<tr>
@@ -36,9 +31,6 @@ Date of Submission ~ `21-11-2020`
 	</tr>
 	<tr>
 		<td>19UCS257 </td> <td> Priyansh Bordia </td>
-	</tr>
-	<tr>
-		<td> 19UCS205 </td> <td> Nishant Dixit </td>
 	</tr>
 </table>
 
