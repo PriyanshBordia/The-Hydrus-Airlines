@@ -41,7 +41,7 @@
 ![login](./Screenshots/login.jpeg)
 
 <div align = "right" style="text-decoration=none !important">
-	<a class = "button" role="button" href ="#top">
+	<a class = "btn btn-outline-primary" role="button" href ="#top">
 		&#8683; Back to Top
 	</a>
 </div>
