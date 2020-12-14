@@ -40,9 +40,9 @@
 
 ![login](./Screenshots/login.jpeg)
 
-<div align = "right" style="text-decoration = none !important">
+<div align = "right" style="text-decoration=none !important">
 	<a class = "button" role="button" href ="#top">
-		Back to Top <i class="bi bi-arrow-bar-up"></i>
+		&#8683; Back to Top
 	</a>
 </div>
 
