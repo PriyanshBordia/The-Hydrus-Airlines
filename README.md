@@ -1,8 +1,8 @@
 # The Hydrus Airlines
 
-> Light Weight app build using java swing let's you search for a flight, book a ticket, cancel the ticket and print the ticket all at one place. 
-> It's easy to use and fun to play around. Under the guidance of Mr. Mukesh Jadon and all the TA's at LNMIIT we have joyfully created the project.
-> Using MySQL for storing data and Java Swing library which if fun to work with.
+> Light Weight app build using java swing lets you search for a flight, book a ticket, cancel the ticket, and print the ticket all in one place. 
+It's easy to use and fun to play around with. Under the guidance of Mr. Mukesh Jadon and all the TA's at LNMIIT, we have joyfully created the project.
+We are using MySQL for storing data and Java Swing library, which is fun to work within a mood.
 
 <hr>
 
