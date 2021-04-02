@@ -6,19 +6,6 @@ We are using MySQL for storing data and Java Swing library, which is fun to work
 
 <hr>
 
-<h2>Features</h2>
-<ul id = "#top">
-	<li><a href = "#login">Login</a></li>
-	<li><a href = "#mainframe">Main Screen</a></li>
-	<li><a href = "#flights">All Flights</a></li>
-	<li><a href = "#flight">Between Destinations</a></li>
-	<li><a href = "#book">Book Ticket</a></li>
-	<li><a href = "#print">Print Ticket</a></li>
-	<li><a href = "#cancel">Cancel Ticket</a></li>
-</ul>
-
-<hr>
-
 
 ### Contributors
 
